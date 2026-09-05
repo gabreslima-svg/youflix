@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-const WHATSAPP = "5516988297943";
-const MENSAGEM = "Ola%2C%20vim%20do%20site%20e%20quero%20testar%20a%20YouFlix%20por%2012h%20gratis";
+const WHATSAPP = "5516994587380";
+const MENSAGEM = "Ola%2C%20vim%20do%20site%20e%20quero%20testar%20a%20YouFlix%20por%2012h%20grátis";
 const LINK_WHATSAPP = `https://wa.me/${WHATSAPP}?text=${MENSAGEM}`;
 
 export default function YouFlixLanding() {
@@ -85,7 +85,7 @@ export default function YouFlixLanding() {
           background: var(--dourado); box-shadow: 0 0 8px var(--dourado);
           animation: pulse 2s infinite;
         }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        @keyframês pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 
         .hero h1 {
           font-size: clamp(40px, 5vw, 66px);
@@ -168,7 +168,7 @@ export default function YouFlixLanding() {
         .mockup-card:nth-child(6) { background: linear-gradient(135deg, #C70102, #FF3B3B); animation-delay: 1.5s; }
         .mockup-card:nth-child(7) { background: linear-gradient(135deg, #E01820, #C70102); animation-delay: 1.8s; }
         .mockup-card:nth-child(8) { background: linear-gradient(135deg, #FF6B00, #C70102); animation-delay: 2.1s; }
-        @keyframes shimmer {
+        @keyframês shimmer {
           0%, 100% { opacity: 0.85; }
           50% { opacity: 1; }
         }
@@ -240,7 +240,7 @@ export default function YouFlixLanding() {
           font-weight: 600;
           margin-left: -2px;
         }
-        .preco-mes {
+        .preco-mês {
           font-size: 14px;
           color: var(--cinza-1);
           font-weight: 500;
@@ -404,7 +404,7 @@ export default function YouFlixLanding() {
         .cf-header { text-align: center; margin-bottom: 60px; }
         .cf-header .section-titulo, .cf-header .section-sub { margin-left: auto; margin-right: auto; }
         .passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .passo {
+        .passó {
           padding: 32px 28px; background: var(--bg-3);
           border: 1px solid var(--cinza-borda); border-radius: 16px;
           transition: all 0.3s;
@@ -416,8 +416,8 @@ export default function YouFlixLanding() {
           background: linear-gradient(135deg, var(--vermelho), var(--roxo));
           color: var(--branco); margin-bottom: 20px; letter-spacing: 0.05em;
         }
-        .passo h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.02em; }
-        .passo p { font-size: 14px; color: var(--cinza-1); line-height: 1.55; }
+        .passó h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.02em; }
+        .passó p { font-size: 14px; color: var(--cinza-1); line-height: 1.55; }
         @media (max-width: 768px) { .passos { grid-template-columns: 1fr; } }
 
         /* OFERTA */
@@ -480,7 +480,7 @@ export default function YouFlixLanding() {
 
       <Nav />
       <Hero />
-      <Conteudo />
+      <Conteúdo />
       <ComoFunciona />
       <Faq />
       <Footer />
@@ -497,7 +497,7 @@ function Nav() {
           
         </a>
         <div className="nav-links">
-          <a href="#conteudo">Conteudo</a>
+          <a href="#conteudo">Conteúdo</a>
           <a href="#faq">FAQ</a>
         </div>
         <a href={LINK_WHATSAPP} target="_blank" rel="noopener noreferrer" className="nav-cta">Assinar</a>
@@ -578,7 +578,7 @@ function Hero() {
   );
 }
 
-function Conteudo() {
+function Conteúdo() {
   const categorias = [
     {
       icone: (
@@ -634,7 +634,7 @@ function Conteudo() {
     <section className="conteudo" id="conteudo">
       <div className="container">
         <div className="conteudo-header">
-          <div className="section-eyebrow">O que voce recebe</div>
+          <div className="section-eyebrow">O que você recebe</div>
           <h2 className="section-titulo">Tudo o que você quer assistir.</h2>
           <p className="section-sub">Filmes, séries, ao vivo, esportes. Em qualidade HD e 4K.</p>
         </div>
@@ -656,7 +656,7 @@ function Conteudo() {
 function ComoFunciona() {
   const passos = [
     { num: "PASSO 1", titulo: "Fale com a gente", desc: "Um clique no WhatsApp, sem cadastro." },
-    { num: "PASSO 2", titulo: "Teste gratuito", desc: "12 horas de acesso completo, sem pagar." },
+    { num: "PASSO 2", titulo: "Teste gratuito", desc: "12 horas de acessó completo, sem pagar." },
     { num: "PASSO 3", titulo: "Ative por R$ 29,90", desc: "Pagamento via Pix. Ativação imediata." },
   ];
   return (
@@ -685,13 +685,13 @@ function Faq() {
   const [aberto, setAberto] = useState<number | null>(0);
   const perguntas = [
     { q: "Como funciona o teste gratuito de 12h?", a: "Chame no WhatsApp e envie 'quero testar'. Você recebe as credenciais em minutos e assiste 12 horas sem pagar." },
-    { q: "Preciso pagar antes de testar?", a: "Não. O teste é gratuito, sem cartão." },
-    { q: "Quantos dispositivos posso usar ao mesmo tempo?", a: "É apenas um dispositivo com acesso completo. Temos planos econômicos para mais de um aplicativo — consulte no WhatsApp." },
+    { q: "Precisó pagar antes de testar?", a: "Não. O teste é gratuito, sem cartão." },
+    { q: "Quantos dispositivos possó usar ao mesmo tempo?", a: "É apenas um dispositivo com acessó completo. Temos planos econômicos para mais de um aplicativo — consulte no WhatsApp." },
     { q: "O YouFlix funciona em Smart TV?", a: "Sim. Funciona em qualquer Smart TV recente (Samsung, LG, Sony, TCL, Roku), TV Box (Android TV, Fire Stick, Mi Box), celular, tablet e PC." },
     { q: "E se eu tiver problema?", a: "Suporte via WhatsApp em horario comercial. Nossa equipe ajuda desde a instalacao ate qualquer problema tecnico. Sem robo, resposta humana." },
-    { q: "Tem fidelidade?", a: "Nao. Voce paga mes a mes, sem contrato ou multa. Se em algum momento quiser cancelar, e so parar de pagar." },
+    { q: "Tem fidelidade?", a: "Não. Você paga mês a mes, sem contrato ou multa. Se em algum momento quiser cancelar, e só parar de pagar." },
     { q: "O conteudo e legalizado?", a: "Somos credenciada oficial autorizada. Todo conteudo passa por licenciamento adequado." },
-    { q: "Como e feito o pagamento?", a: "Via Pix. Voce paga R$ 29,90 no primeiro dia do mes e a assinatura fica ativa por 30 dias." },
+    { q: "Como e feito o pagamento?", a: "Via Pix. Você paga R$ 29,90 no primeiro dia do mês e a assinatura fica ativa por 30 dias." },
   ];
   return (
     <section id="faq">
@@ -699,7 +699,7 @@ function Faq() {
         <div className="faq-wrap">
           <div className="faq-header">
             <div className="section-eyebrow">FAQ</div>
-            <h2 className="section-titulo">Duvidas <em>frequentes</em></h2>
+            <h2 className="section-titulo">Dúvidas <em>frequentes</em></h2>
           </div>
           {perguntas.map((p, i) => (
             <div className={`faq-item ${aberto === i ? 'aberto' : ''}`} key={i}>
@@ -723,12 +723,12 @@ function Footer() {
         <div className="footer-inner">
           <div className="footer-brand">
             <a href="#" className="logo"><img src="/youflix-logo.png" alt="YouFlix" style={{ height: 40, width: "auto" }} /></a>
-            <p className="footer-desc">Netflix, Prime, Globoplay, esportes e canais fechados em um so app por R$ 29,90/mes.</p>
+            <p className="footer-desc">Netflix, Prime, Globoplay, esportes e canais fechados em um só app por R$ 29,90/mês.</p>
           </div>
           <div>
-            <h4>Navegacao</h4>
+            <h4>Navegação</h4>
             <ul>
-              <li><a href="#conteudo">Conteudo</a></li>
+              <li><a href="#conteudo">Conteúdo</a></li>
               <li><a href="#dispositivos">Dispositivos</a></li>
               <li><a href="#oferta">Assinar</a></li>
               <li><a href="#faq">FAQ</a></li>
@@ -738,7 +738,7 @@ function Footer() {
             <h4>Contato</h4>
             <ul>
               <li><a href={LINK_WHATSAPP} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-              <li>Atendimento diario</li>
+              <li>Atendimento diário</li>
             </ul>
           </div>
         </div>
