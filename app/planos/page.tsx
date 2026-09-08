@@ -83,6 +83,33 @@ export default function PlanosPage() {
           font-family: 'Inter', -apple-system, system-ui, sans-serif;
           -webkit-font-smoothing: antialiased;
           line-height: 1.5;
+          position: relative;
+          min-height: 100vh;
+        }
+        body::before {
+          content: '';
+          position: fixed;
+          inset: 0;
+          background-image: url('/streamers.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0.35;
+          z-index: -2;
+          pointer-events: none;
+        }
+        body::after {
+          content: '';
+          position: fixed;
+          inset: 0;
+          background: linear-gradient(180deg,
+            rgba(10,10,10,0.85) 0%,
+            rgba(10,10,10,0.75) 40%,
+            rgba(10,10,10,0.9) 80%,
+            rgba(10,10,10,0.98) 100%
+          );
+          z-index: -1;
+          pointer-events: none;
         }
         a { color: inherit; text-decoration: none; }
 
