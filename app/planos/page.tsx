@@ -32,67 +32,17 @@ export default function PlanosPage() {
         .nav-cta { background: var(--vermelho); color: var(--branco); padding: 8px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; }
         .nav-cta:hover { background: #b91c1c; }
 
-        .hero { padding: 60px 32px 32px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero { padding: 60px 32px 24px; text-align: center; max-width: 900px; margin: 0 auto; }
         .hero-titulo { font-size: 52px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; }
         .hero-sub { font-size: 17px; color: var(--cinza-1); max-width: 560px; margin: 0 auto; }
 
-        .hero-mockup {
-          max-width: 640px;
-          margin: -20px auto 0;
-          padding: 0 32px 40px;
-          position: relative;
-        }
-        .mockup-glow {
-          position: absolute;
-          top: 20%;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 80%;
-          height: 60%;
-          background: radial-gradient(ellipse at center, rgba(124,58,237,0.28) 0%, rgba(220,38,38,0.15) 40%, transparent 70%);
-          filter: blur(50px);
-          pointer-events: none;
-          z-index: 0;
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        .mockup-img {
-          position: relative;
-          z-index: 1;
-          display: block;
-          width: 100%;
-          height: auto;
-          border-radius: 16px;
-          box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
-        }
-        .mockup-badges {
-          display: flex;
-          justify-content: center;
-          gap: 12px;
-          margin-top: 20px;
-          flex-wrap: wrap;
-        }
-        .mockup-badge {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          padding: 6px 12px;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(255,255,255,0.08);
-          border-radius: 100px;
-          font-size: 12px;
-          color: var(--cinza-0);
-          font-weight: 500;
-        }
-        .mockup-badge svg { flex-shrink: 0; }
+        .showcase { max-width: 640px; margin: 0 auto 20px; padding: 0 32px; position: relative; }
+        .showcase-glow { position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 70%; height: 60%; background: radial-gradient(ellipse at center, rgba(124,58,237,0.35) 0%, rgba(220,38,38,0.18) 45%, transparent 75%); filter: blur(60px); pointer-events: none; z-index: 0; }
+        .showcase-img { position: relative; z-index: 1; display: block; width: 100%; height: auto; border-radius: 20px; box-shadow: 0 30px 60px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06); }
+        .showcase-badges { position: relative; z-index: 1; display: flex; justify-content: center; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+        .showcase-badge { display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; font-size: 12px; color: var(--cinza-0); font-weight: 500; }
 
-        .planos-wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px 60px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .planos-wrap { max-width: 1200px; margin: 40px auto 0; padding: 0 32px 60px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
         .plano-card { position: relative; background: radial-gradient(circle at 100% 0%, rgba(124,58,237,0.12) 0%, transparent 50%), linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 36px 30px 32px; display: flex; flex-direction: column; overflow: hidden; transition: all 0.25s; }
         .plano-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.18); box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6); }
@@ -148,25 +98,13 @@ export default function PlanosPage() {
         .rodape a:hover { color: var(--branco); }
 
         @media (max-width: 900px) {
-          .planos-wrap { grid-template-columns: 1fr; gap: 32px; padding: 0 20px 40px; }
+          .planos-wrap { grid-template-columns: 1fr; gap: 32px; padding: 0 20px 40px; margin-top: 20px; }
           .hero-titulo { font-size: 36px; }
-          .hero { padding: 30px 20px 20px; }
+          .hero { padding: 30px 20px 16px; }
           .plano-preco { font-size: 46px; }
-          .hero-mockup { padding: 0 40px 32px; margin-top: 0; max-width: 100%; }
-          
-          
-          
-        .mockup-img {
-          position: relative;
-          z-index: 1;
-          display: block;
-          width: 100%;
-          height: auto;
-          border-radius: 16px;
-          box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
-        }
-        .mockup-badges { gap: 8px; margin-top: 20px; }
-          .mockup-badge { padding: 6px 12px; font-size: 11px; }
+          .showcase { padding: 0 20px; max-width: 100%; }
+          .showcase-img { border-radius: 14px; }
+          .showcase-badges { gap: 8px; margin-top: 16px; }
           .adicional { flex-direction: column; text-align: center; gap: 16px; margin: 20px 20px 40px; padding: 24px; }
           .adicional-preco-wrap { text-align: center; }
           .faq-mini { padding: 0 20px; }
@@ -195,46 +133,23 @@ export default function PlanosPage() {
         </p>
       </section>
 
-      <div className="hero-mockup">
-        <div className="mockup-glow" />
-        <img className="mockup-img" src="/streamers.jpg" alt="Filmes, séries e esportes disponíveis" />
-        <div className="mockup-badges">
-          <div className="mockup-badge">
+      <div className="showcase">
+        <div className="showcase-glow" />
+        <img className="showcase-img" src="/streamers.jpg" alt="Filmes, séries e esportes disponíveis" />
+        <div className="showcase-badges">
+          <div className="showcase-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12"/>
             </svg>
             <span>500+ canais</span>
           </div>
-          <div className="mockup-badge">
+          <div className="showcase-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12"/>
             </svg>
             <span>30 mil+ filmes</span>
           </div>
-          <div className="mockup-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            <span>Esportes 24/7</span>
-          </div>
-        </div>
-      </div>
-        <div className="tv-base" />
-        <div className="tv-stand" />
-        <div className="mockup-badges">
-          <div className="mockup-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            <span>500+ canais</span>
-          </div>
-          <div className="mockup-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            <span>30 mil+ filmes</span>
-          </div>
-          <div className="mockup-badge">
+          <div className="showcase-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12"/>
             </svg>
