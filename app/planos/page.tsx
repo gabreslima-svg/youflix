@@ -19,6 +19,7 @@ export default function PlanosPage() {
       <style>{`
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --preto: #0a0a0a; --branco: #fff; --cinza-0: #f5f5f7; --cinza-1: #a3a3a3; --cinza-2: #737373; --vermelho: #DC2626; --roxo: #7C3AED; }
+        html { scroll-behavior: smooth; }
         html, body { overflow-x: hidden; }
         body { background: var(--preto); color: var(--branco); font-family: 'Inter', -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.5; }
         a { color: inherit; text-decoration: none; }
@@ -35,6 +36,34 @@ export default function PlanosPage() {
         .hero { padding: 60px 32px 24px; text-align: center; max-width: 900px; margin: 0 auto; }
         .hero-titulo { font-size: 52px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; }
         .hero-sub { font-size: 17px; color: var(--cinza-1); max-width: 560px; margin: 0 auto; }
+
+        
+        .hero-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 24px;
+          padding: 14px 28px;
+          background: linear-gradient(90deg, #DC2626 0%, #7C3AED 100%);
+          color: var(--branco);
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 0.02em;
+          border-radius: 100px;
+          box-shadow: 0 10px 30px -10px rgba(220,38,38,0.5);
+          transition: all 0.2s;
+          cursor: pointer;
+        }
+        .hero-cta:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 15px 40px -10px rgba(220,38,38,0.7);
+        }
+        .hero-cta svg {
+          transition: transform 0.2s;
+        }
+        .hero-cta:hover svg {
+          transform: translateY(2px);
+        }
 
         .showcase { max-width: 640px; margin: 0 auto 20px; padding: 0 32px; position: relative; }
         .showcase-glow { position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 70%; height: 60%; background: radial-gradient(ellipse at center, rgba(124,58,237,0.35) 0%, rgba(220,38,38,0.18) 45%, transparent 75%); filter: blur(60px); pointer-events: none; z-index: 0; }
@@ -102,7 +131,35 @@ export default function PlanosPage() {
           .hero-titulo { font-size: 36px; }
           .hero { padding: 30px 20px 16px; }
           .plano-preco { font-size: 46px; }
-          .showcase { padding: 0 20px; max-width: 100%; }
+          
+        .hero-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 24px;
+          padding: 14px 28px;
+          background: linear-gradient(90deg, #DC2626 0%, #7C3AED 100%);
+          color: var(--branco);
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 0.02em;
+          border-radius: 100px;
+          box-shadow: 0 10px 30px -10px rgba(220,38,38,0.5);
+          transition: all 0.2s;
+          cursor: pointer;
+        }
+        .hero-cta:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 15px 40px -10px rgba(220,38,38,0.7);
+        }
+        .hero-cta svg {
+          transition: transform 0.2s;
+        }
+        .hero-cta:hover svg {
+          transform: translateY(2px);
+        }
+
+        .showcase { padding: 0 20px; max-width: 100%; }
           .showcase-img { border-radius: 14px; }
           .showcase-badges { gap: 8px; margin-top: 16px; }
           .adicional { flex-direction: column; text-align: center; gap: 16px; margin: 20px 20px 40px; padding: 24px; }
@@ -131,6 +188,12 @@ export default function PlanosPage() {
           Todos os planos incluem <strong>catálogo completo</strong> com filmes, séries, esportes ao vivo e mais de 500 canais.
           Cancele quando quiser.
         </p>
+        <a href="#planos" className="hero-cta">
+          Ver planos
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
       </section>
 
       <div className="showcase">
@@ -158,7 +221,7 @@ export default function PlanosPage() {
         </div>
       </div>
 
-      <div className="planos-wrap">
+      <div className="planos-wrap" id="planos">
         {planos.map((plano) => (
           <div key={plano.id} className={`plano-card ${plano.id === "anual" ? "destaque" : ""}`}>
             {plano.tag && <div className="plano-tag">{plano.tag}</div>}
