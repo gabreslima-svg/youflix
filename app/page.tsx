@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const WHATSAPP = "5516994587380";
-const MENSAGEM = "Ola%2C%20vim%20do%20site%20e%20quero%20testar%20a%20YouFlix%20por%206h%20grátis";
+const MENSAGEM = "Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20testar%20a%20YouFlix%20por%206h%20grátis";
 const LINK_WHATSAPP = `https://wa.me/${WHATSAPP}?text=${MENSAGEM}`;
 
 export default function YouFlixLanding() {
