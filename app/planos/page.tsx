@@ -37,9 +37,9 @@ export default function PlanosPage() {
         .hero-sub { font-size: 17px; color: var(--cinza-1); max-width: 560px; margin: 0 auto; }
 
         .banner { max-width: 1200px; margin: 0 auto; padding: 0 32px 40px; }
-        .banner-inner { position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 21 / 9; background: #171717; }
-        .banner-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .banner-inner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, transparent 45%, rgba(10,10,10,0.5) 85%, rgba(10,10,10,0.9) 100%); }
+        .banner-inner { position: relative; border-radius: 20px; overflow: hidden; max-height: 320px; background: #171717; display: flex; align-items: center; justify-content: center; }
+        .banner-inner img { width: 100%; max-height: 320px; object-fit: contain; display: block; }
+        .banner-inner::after { display: none; }
         .banner-cap { position: absolute; bottom: 24px; left: 32px; right: 32px; z-index: 2; }
         .banner-titulo { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
         .banner-sub { font-size: 13px; color: var(--cinza-1); }
@@ -105,7 +105,7 @@ export default function PlanosPage() {
           .hero { padding: 30px 20px 20px; }
           .plano-preco { font-size: 46px; }
           .banner { padding: 0 20px 32px; }
-          .banner-inner { aspect-ratio: 16 / 10; border-radius: 14px; }
+          .banner-inner { max-height: 200px; border-radius: 14px; }
           .banner-cap { bottom: 16px; left: 20px; right: 20px; }
           .banner-titulo { font-size: 17px; }
           .banner-sub { font-size: 12px; }
@@ -140,10 +140,7 @@ export default function PlanosPage() {
       <div className="banner">
         <div className="banner-inner">
           <img src="/streamers.jpg" alt="Streaming completo — filmes, séries e esportes" />
-          <div className="banner-cap">
-            <div className="banner-titulo">Todo o entretenimento em um só lugar</div>
-            <div className="banner-sub">Filmes, séries, esportes e canais ao vivo</div>
-          </div>
+          
         </div>
       </div>
 
