@@ -312,6 +312,147 @@ export default function YouFlixLanding() {
           .hero-disp-marcas { font-size: 9px; }
         }
 
+        
+        /* ========== SECAO DE PLANOS ========== */
+        .planos-section {
+          padding: 80px 0 60px;
+          background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(10,10,10,0.5) 100%);
+          border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .planos-container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+        .planos-header { text-align: center; margin-bottom: 40px; }
+        .planos-titulo {
+          font-size: 40px; font-weight: 800; letter-spacing: -0.03em;
+          line-height: 1.1; margin-bottom: 12px;
+        }
+        .planos-sub { font-size: 15px; color: var(--cinza-1); max-width: 500px; margin: 0 auto; }
+
+        .planos-showcase {
+          max-width: 640px; margin: 0 auto 50px; position: relative;
+        }
+        .planos-showcase-glow {
+          position: absolute; top: 15%; left: 50%; transform: translateX(-50%);
+          width: 70%; height: 60%;
+          background: radial-gradient(ellipse at center, rgba(124,58,237,0.3) 0%, rgba(220,38,38,0.15) 45%, transparent 75%);
+          filter: blur(60px); pointer-events: none; z-index: 0;
+        }
+        .planos-showcase-img {
+          position: relative; z-index: 1; display: block; width: 100%; height: auto;
+          border-radius: 20px;
+          box-shadow: 0 30px 60px -20px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06);
+        }
+
+        .planos-grid {
+          display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+          margin-bottom: 40px;
+        }
+
+        .p-card {
+          position: relative;
+          background: radial-gradient(circle at 100% 0%, rgba(124,58,237,0.12) 0%, transparent 50%),
+                      linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+          border: 1px solid rgba(255,255,255,0.08);
+          border-radius: 18px;
+          padding: 32px 26px 28px;
+          display: flex; flex-direction: column;
+          transition: all 0.25s;
+        }
+        .p-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
+        .p-card.destaque {
+          background: radial-gradient(circle at 100% 0%, rgba(124,58,237,0.25) 0%, transparent 50%),
+                      radial-gradient(circle at 0% 100%, rgba(220,38,38,0.2) 0%, transparent 50%),
+                      linear-gradient(180deg, rgba(220,38,38,0.08) 0%, rgba(124,58,237,0.05) 100%);
+          border-color: rgba(220,38,38,0.4);
+          box-shadow: 0 30px 80px -20px rgba(220,38,38,0.3);
+        }
+
+        .p-tag {
+          position: absolute; top: -1px; right: 20px;
+          background: linear-gradient(90deg, #DC2626 0%, #7C3AED 100%);
+          color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 0.1em;
+          padding: 7px 12px; border-radius: 0 0 8px 8px;
+          box-shadow: 0 4px 12px rgba(220,38,38,0.4);
+        }
+
+        .p-nome {
+          font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em;
+          color: var(--cinza-1); font-weight: 700; margin-bottom: 16px;
+        }
+        .p-preco-wrap { display: flex; align-items: baseline; gap: 3px; margin-bottom: 4px; }
+        .p-cifrao { font-size: 18px; font-weight: 600; color: var(--cinza-1); }
+        .p-preco {
+          font-size: 46px; font-weight: 800; letter-spacing: -0.04em; line-height: 1;
+          background: linear-gradient(180deg, #fff 0%, #a3a3a3 200%);
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .p-decimal { font-size: 18px; font-weight: 700; color: var(--cinza-1); }
+        .p-periodo { font-size: 12px; color: var(--cinza-1); margin-bottom: 4px; }
+        .p-economia {
+          font-size: 11px; font-weight: 700; color: #34D399;
+          margin-bottom: 20px; min-height: 16px;
+          display: flex; align-items: center; gap: 5px;
+        }
+        .p-economia::before { content: '↓'; font-weight: 800; }
+        .p-divisor {
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+          margin: 0 -26px 20px;
+        }
+
+        .p-beneficios { list-style: none; margin-bottom: 22px; flex: 1; padding: 0; }
+        .p-beneficios li {
+          display: flex; align-items: flex-start; gap: 10px;
+          padding: 7px 0; font-size: 13px; color: var(--cinza-0); line-height: 1.4;
+        }
+        .p-beneficios li::before {
+          content: '✓'; color: #34D399; font-weight: 800; font-size: 13px;
+          flex-shrink: 0; margin-top: 1px;
+        }
+
+        .p-btn {
+          display: block; text-align: center; padding: 13px 18px;
+          background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);
+          border-radius: 10px; color: #fff; font-size: 13px; font-weight: 700;
+          transition: all 0.2s; cursor: pointer; text-decoration: none;
+        }
+        .p-btn::after { content: '→'; margin-left: 6px; display: inline-block; transition: transform 0.2s; }
+        .p-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); }
+        .p-btn:hover::after { transform: translateX(4px); }
+        .p-card.destaque .p-btn {
+          background: linear-gradient(90deg, #DC2626 0%, #7C3AED 100%);
+          border-color: transparent;
+          box-shadow: 0 10px 30px -10px rgba(220,38,38,0.6);
+        }
+        .p-card.destaque .p-btn:hover {
+          box-shadow: 0 15px 40px -10px rgba(220,38,38,0.8);
+          transform: translateY(-1px);
+        }
+
+        .p-adicional {
+          max-width: 700px; margin: 0 auto; padding: 24px 32px;
+          background: linear-gradient(90deg, rgba(124,58,237,0.08) 0%, rgba(220,38,38,0.08) 100%);
+          border: 1px solid rgba(124,58,237,0.2);
+          border-radius: 14px;
+          display: flex; align-items: center; gap: 20px;
+        }
+        .p-adicional-info { flex: 1; }
+        .p-adicional-titulo { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+        .p-adicional-desc { font-size: 12px; color: var(--cinza-1); line-height: 1.5; }
+        .p-adicional-preco-wrap { text-align: right; flex-shrink: 0; }
+        .p-adicional-preco { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+        .p-adicional-label { font-size: 10px; color: var(--cinza-1); margin-top: 2px; }
+
+        @media (max-width: 900px) {
+          .planos-grid { grid-template-columns: 1fr; gap: 28px; }
+          .planos-titulo { font-size: 30px; }
+          .planos-section { padding: 60px 0 40px; }
+          .planos-container { padding: 0 20px; }
+          .planos-showcase { margin-bottom: 32px; }
+          .planos-showcase-img { border-radius: 14px; }
+          .p-adicional { flex-direction: column; text-align: center; gap: 12px; padding: 20px; }
+          .p-adicional-preco-wrap { text-align: center; }
+        }
+
         @media (max-width: 900px) {
           .hero-inner { text-align: center; margin: 0 auto; }
           .hero-sub { margin: 0 auto 32px; }
@@ -482,6 +623,100 @@ export default function YouFlixLanding() {
       <Hero />
       <Conteúdo />
       <ComoFunciona />
+            <section id="planos" className="planos-section">
+        <div className="planos-container">
+          <div className="planos-header">
+            <h2 className="planos-titulo">Escolha seu plano</h2>
+            <p className="planos-sub">Todos incluem catálogo completo. Cancele quando quiser.</p>
+          </div>
+
+          <div className="planos-showcase">
+            <div className="planos-showcase-glow" />
+            <img className="planos-showcase-img" src="/streamers.jpg" alt="Filmes, séries e esportes disponíveis" />
+          </div>
+
+          <div className="planos-grid">
+            <div className="p-card">
+              <div className="p-nome">Mensal</div>
+              <div className="p-preco-wrap">
+                <span className="p-cifrao">R$</span>
+                <span className="p-preco">29</span>
+                <span className="p-decimal">,90</span>
+              </div>
+              <div className="p-periodo">por mês</div>
+              <div className="p-divisor" />
+              <ul className="p-beneficios">
+                <li>Acesso completo ao catálogo</li>
+                <li>500+ canais ao vivo</li>
+                <li>30 mil+ filmes e séries</li>
+                <li>Esportes 24/7</li>
+                <li>Cancele quando quiser</li>
+              </ul>
+              <a href={LINK_WHATSAPP} target="_blank" rel="noopener noreferrer" className="p-btn">
+                Assinar Mensal
+              </a>
+            </div>
+
+            <div className="p-card">
+              <div className="p-tag">MAIS VANTAJOSO</div>
+              <div className="p-nome">Trimestral</div>
+              <div className="p-preco-wrap">
+                <span className="p-cifrao">R$</span>
+                <span className="p-preco">69</span>
+                <span className="p-decimal">,90</span>
+              </div>
+              <div className="p-periodo">a cada 3 meses</div>
+              <div className="p-economia">Equivale a R$ 23,30/mês</div>
+              <div className="p-divisor" />
+              <ul className="p-beneficios">
+                <li>Tudo do plano mensal</li>
+                <li>Economia de R$ 20,80</li>
+                <li>Preço fixo por 3 meses</li>
+                <li>Suporte prioritário</li>
+                <li>Cancele quando quiser</li>
+              </ul>
+              <a href={LINK_WHATSAPP} target="_blank" rel="noopener noreferrer" className="p-btn">
+                Assinar Trimestral
+              </a>
+            </div>
+
+            <div className="p-card destaque">
+              <div className="p-tag">MELHOR PREÇO</div>
+              <div className="p-nome">Anual</div>
+              <div className="p-preco-wrap">
+                <span className="p-cifrao">R$</span>
+                <span className="p-preco">199</span>
+                <span className="p-decimal">,90</span>
+              </div>
+              <div className="p-periodo">por ano</div>
+              <div className="p-economia">Equivale a R$ 16,66/mês</div>
+              <div className="p-divisor" />
+              <ul className="p-beneficios">
+                <li>Tudo do plano mensal</li>
+                <li>Economia de R$ 158,90 no ano</li>
+                <li>Preço fixo por 12 meses</li>
+                <li>Suporte VIP</li>
+                <li>Sem reajustes</li>
+              </ul>
+              <a href={LINK_WHATSAPP} target="_blank" rel="noopener noreferrer" className="p-btn">
+                Assinar Anual
+              </a>
+            </div>
+          </div>
+
+          <div className="p-adicional">
+            <div className="p-adicional-info">
+              <div className="p-adicional-titulo">Precisa de mais uma tela?</div>
+              <div className="p-adicional-desc">Adicione um dispositivo extra para usar simultaneamente com o seu plano.</div>
+            </div>
+            <div className="p-adicional-preco-wrap">
+              <div className="p-adicional-preco">+ R$ 9,90</div>
+              <div className="p-adicional-label">por tela adicional</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Faq />
       <Footer />
     </>
