@@ -37,7 +37,7 @@ export default function PlanosPage() {
         .hero-sub { font-size: 17px; color: var(--cinza-1); max-width: 560px; margin: 0 auto; }
 
         .hero-mockup {
-          max-width: 520px;
+          max-width: 640px;
           margin: -20px auto 0;
           padding: 0 32px 40px;
           position: relative;
@@ -54,63 +54,22 @@ export default function PlanosPage() {
           pointer-events: none;
           z-index: 0;
         }
-        .tv {
+        
+        
+        
+        
+        
+        
+        
+        
+        .mockup-img {
           position: relative;
           z-index: 1;
-          background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
-          border-radius: 10px;
-          padding: 8px 8px 6px;
-          box-shadow:
-            0 0 0 1px rgba(255,255,255,0.06),
-            0 30px 60px -20px rgba(0,0,0,0.8),
-            0 0 100px -30px rgba(124,58,237,0.3);
-        }
-        .tv-screen {
-          position: relative;
-          border-radius: 6px;
-          overflow: hidden;
-          aspect-ratio: 16 / 9;
-          background: #000;
-        }
-        .tv-screen img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
           display: block;
-        }
-        .tv-screen::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 24px;
-          background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 100%);
-          z-index: 3;
-          pointer-events: none;
-        }
-        .tv-screen::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.4) 100%);
-          pointer-events: none;
-          z-index: 2;
-        }
-        .tv-base {
-          width: 20%;
-          height: 6px;
-          background: linear-gradient(180deg, #2a2a2a 0%, #0a0a0a 100%);
-          margin: 0 auto;
-          border-radius: 0 0 8px 8px;
-        }
-        .tv-stand {
-          width: 40%;
-          height: 4px;
-          background: #171717;
-          margin: 0 auto;
-          border-radius: 0 0 4px 4px;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+          width: 100%;
+          height: auto;
+          border-radius: 16px;
+          box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
         }
         .mockup-badges {
           display: flex;
@@ -194,9 +153,19 @@ export default function PlanosPage() {
           .hero { padding: 30px 20px 20px; }
           .plano-preco { font-size: 46px; }
           .hero-mockup { padding: 0 40px 32px; margin-top: 0; max-width: 100%; }
-          .tv { padding: 5px 5px 4px; border-radius: 8px; }
-          .tv-screen { border-radius: 4px; }
-          .mockup-badges { gap: 8px; margin-top: 20px; }
+          
+          
+          
+        .mockup-img {
+          position: relative;
+          z-index: 1;
+          display: block;
+          width: 100%;
+          height: auto;
+          border-radius: 16px;
+          box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+        }
+        .mockup-badges { gap: 8px; margin-top: 20px; }
           .mockup-badge { padding: 6px 12px; font-size: 11px; }
           .adicional { flex-direction: column; text-align: center; gap: 16px; margin: 20px 20px 40px; padding: 24px; }
           .adicional-preco-wrap { text-align: center; }
@@ -228,11 +197,28 @@ export default function PlanosPage() {
 
       <div className="hero-mockup">
         <div className="mockup-glow" />
-        <div className="tv">
-          <div className="tv-screen">
-            <img src="/streamers.jpg" alt="Filmes, séries e esportes disponíveis" />
+        <img className="mockup-img" src="/streamers.jpg" alt="Filmes, séries e esportes disponíveis" />
+        <div className="mockup-badges">
+          <div className="mockup-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>500+ canais</span>
+          </div>
+          <div className="mockup-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>30 mil+ filmes</span>
+          </div>
+          <div className="mockup-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>Esportes 24/7</span>
           </div>
         </div>
+      </div>
         <div className="tv-base" />
         <div className="tv-stand" />
         <div className="mockup-badges">
