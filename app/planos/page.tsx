@@ -83,33 +83,6 @@ export default function PlanosPage() {
           font-family: 'Inter', -apple-system, system-ui, sans-serif;
           -webkit-font-smoothing: antialiased;
           line-height: 1.5;
-          position: relative;
-          min-height: 100vh;
-        }
-        body::before {
-          content: '';
-          position: fixed;
-          inset: 0;
-          background-image: url('/streamers.jpg');
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          opacity: 0.35;
-          z-index: -2;
-          pointer-events: none;
-        }
-        body::after {
-          content: '';
-          position: fixed;
-          inset: 0;
-          background: linear-gradient(180deg,
-            rgba(10,10,10,0.85) 0%,
-            rgba(10,10,10,0.75) 40%,
-            rgba(10,10,10,0.9) 80%,
-            rgba(10,10,10,0.98) 100%
-          );
-          z-index: -1;
-          pointer-events: none;
         }
         a { color: inherit; text-decoration: none; }
 
@@ -409,6 +382,66 @@ export default function PlanosPage() {
         .rodape { padding: 40px 32px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); color: var(--cinza-2); font-size: 12px; }
         .rodape a { color: var(--cinza-1); }
         .rodape a:hover { color: var(--branco); }
+
+        
+
+        /* Banner da imagem streamers */
+        .streamers-banner {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 32px 40px;
+        }
+        .streamers-banner-inner {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          aspect-ratio: 21 / 9;
+          background: #171717;
+        }
+        .streamers-banner-inner img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        .streamers-banner-inner::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(180deg,
+            transparent 0%,
+            transparent 40%,
+            rgba(10,10,10,0.4) 80%,
+            rgba(10,10,10,0.85) 100%
+          );
+          pointer-events: none;
+        }
+        .streamers-banner-caption {
+          position: absolute;
+          bottom: 24px;
+          left: 32px;
+          right: 32px;
+          z-index: 2;
+          color: var(--branco);
+        }
+        .streamers-banner-titulo {
+          font-size: 22px;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          margin-bottom: 4px;
+        }
+        .streamers-banner-sub {
+          font-size: 13px;
+          color: var(--cinza-1);
+        }
+
+        @media (max-width: 900px) {
+          .streamers-banner { padding: 0 20px 32px; }
+          .streamers-banner-inner { aspect-ratio: 16 / 10; border-radius: 14px; }
+          .streamers-banner-caption { bottom: 16px; left: 20px; right: 20px; }
+          .streamers-banner-titulo { font-size: 17px; }
+          .streamers-banner-sub { font-size: 12px; }
+        }
 
         @media (max-width: 900px) {
           .planos-wrap { grid-template-columns: 1fr; gap: 32px; padding: 40px 20px; }
