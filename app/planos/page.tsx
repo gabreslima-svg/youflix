@@ -37,9 +37,9 @@ export default function PlanosPage() {
         .hero-sub { font-size: 17px; color: var(--cinza-1); max-width: 560px; margin: 0 auto; }
 
         .hero-mockup {
-          max-width: 900px;
+          max-width: 520px;
           margin: -20px auto 0;
-          padding: 0 32px 60px;
+          padding: 0 32px 40px;
           position: relative;
         }
         .mockup-glow {
@@ -49,8 +49,8 @@ export default function PlanosPage() {
           transform: translateX(-50%);
           width: 80%;
           height: 60%;
-          background: radial-gradient(ellipse at center, rgba(124,58,237,0.35) 0%, rgba(220,38,38,0.2) 40%, transparent 70%);
-          filter: blur(60px);
+          background: radial-gradient(ellipse at center, rgba(124,58,237,0.28) 0%, rgba(220,38,38,0.15) 40%, transparent 70%);
+          filter: blur(50px);
           pointer-events: none;
           z-index: 0;
         }
@@ -58,8 +58,8 @@ export default function PlanosPage() {
           position: relative;
           z-index: 1;
           background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
-          border-radius: 12px;
-          padding: 10px 10px 8px;
+          border-radius: 10px;
+          padding: 8px 8px 6px;
           box-shadow:
             0 0 0 1px rgba(255,255,255,0.06),
             0 30px 60px -20px rgba(0,0,0,0.8),
@@ -115,15 +115,15 @@ export default function PlanosPage() {
         .mockup-badges {
           display: flex;
           justify-content: center;
-          gap: 20px;
-          margin-top: 32px;
+          gap: 12px;
+          margin-top: 20px;
           flex-wrap: wrap;
         }
         .mockup-badge {
           display: flex;
           align-items: center;
-          gap: 8px;
-          padding: 8px 16px;
+          gap: 6px;
+          padding: 6px 12px;
           background: rgba(255,255,255,0.04);
           border: 1px solid rgba(255,255,255,0.08);
           border-radius: 100px;
@@ -193,8 +193,8 @@ export default function PlanosPage() {
           .hero-titulo { font-size: 36px; }
           .hero { padding: 30px 20px 20px; }
           .plano-preco { font-size: 46px; }
-          .hero-mockup { padding: 0 16px 40px; margin-top: 0; }
-          .tv { padding: 6px 6px 5px; border-radius: 8px; }
+          .hero-mockup { padding: 0 40px 32px; margin-top: 0; max-width: 100%; }
+          .tv { padding: 5px 5px 4px; border-radius: 8px; }
           .tv-screen { border-radius: 4px; }
           .mockup-badges { gap: 8px; margin-top: 20px; }
           .mockup-badge { padding: 6px 12px; font-size: 11px; }
