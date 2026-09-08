@@ -748,7 +748,7 @@ function Hero() {
       <div className="container">
         <div className="hero-inner">
           <div>
-            <h1>Filmes, séries e esportes.<br /><span className="grad">Sem limites.</span></h1>
+            <h1>Por que pagar por um streaming, se você pode ter <strong>todos</strong>?<br /><span className="grad">Sem limites.</span></h1>
             <p className="hero-sub">Assista onde e quando quiser. Cancele quando quiser.</p>
             <div className="preco-card">
               <span className="preco-label">A partir de</span>
