@@ -498,6 +498,7 @@ function Nav() {
         </a>
         <div className="nav-links">
           <a href="#conteudo">Conteúdo</a>
+          <a href="/planos">Planos</a>
           <a href="#faq">FAQ</a>
         </div>
         <a href={LINK_WHATSAPP} target="_blank" rel="noopener noreferrer" className="nav-cta">Assinar</a>
@@ -731,7 +732,8 @@ function Footer() {
               <li><a href="#conteudo">Conteúdo</a></li>
               <li><a href="#dispositivos">Dispositivos</a></li>
               <li><a href="#oferta">Assinar</a></li>
-              <li><a href="#faq">FAQ</a></li>
+              <li><a href="/planos">Planos</a>
+          <a href="#faq">FAQ</a></li>
             </ul>
           </div>
           <div>
