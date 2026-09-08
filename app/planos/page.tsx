@@ -75,7 +75,7 @@ export default function PlanosPage() {
         .tv-screen img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           display: block;
         }
         .tv-screen::before {
