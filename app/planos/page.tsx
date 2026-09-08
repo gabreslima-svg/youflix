@@ -271,7 +271,7 @@ export default function PlanosPage() {
         <h2 className="faq-mini-titulo">Perguntas frequentes</h2>
         <div className="faq-item">
           <div className="faq-q">Como funciona o teste grátis?</div>
-          <div className="faq-a">Você ganha 12 horas gratuitas para testar todo o catálogo. Se gostar, escolhe o plano no WhatsApp e libera o acesso definitivo via Pix.</div>
+          <div className="faq-a">Você ganha 6 horas gratuitas para testar todo o catálogo. Se gostar, escolhe o plano no WhatsApp e libera o acesso definitivo via Pix.</div>
         </div>
         <div className="faq-item">
           <div className="faq-q">Posso cancelar quando quiser?</div>
