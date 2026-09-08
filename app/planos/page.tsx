@@ -6,11 +6,11 @@ const linkWhats = (plano: string) =>
 
 const planos = [
   { id: "mensal", nome: "Mensal", preco: 29.90, periodo: "por mês", economia: null, tag: null,
-    beneficios: ["Acesso completo ao catálogo", "500+ canais ao vivo", "30 mil+ filmes", "10 mil+ séries", "Esportes 24/7", "Suporte via WhatsApp", "Cancele quando quiser"] },
+    beneficios: ["Todos os streamings inclusos", "500+ canais ao vivo", "30 mil+ filmes", "10 mil+ séries", "Esportes 24/7", "Suporte via WhatsApp", "Cancele quando quiser"] },
   { id: "trimestral", nome: "Trimestral", preco: 69.90, periodo: "a cada 3 meses", economia: "Equivale a R$ 23,30/mês", tag: "MAIS VANTAJOSO",
-    beneficios: ["Tudo do plano mensal", "Economia de R$ 20,80 no período", "Preço fixo por 3 meses", "Renovação facilitada", "Suporte prioritário", "Sem taxas extras", "Cancele quando quiser"] },
+    beneficios: ["Todos os streamings inclusos", "Tudo do plano mensal", "Economia de R$ 20,80 no período", "Preço fixo por 3 meses", "Suporte prioritário", "Sem taxas extras", "Cancele quando quiser"] },
   { id: "anual", nome: "Anual", preco: 199.90, periodo: "por ano", economia: "Equivale a R$ 16,66/mês", tag: "MELHOR PREÇO",
-    beneficios: ["Tudo do plano mensal", "Economia de R$ 158,90 no ano", "Preço fixo por 12 meses", "Acesso ilimitado", "Suporte VIP", "Sem reajustes durante o período", "Cancele quando quiser"] },
+    beneficios: ["Todos os streamings inclusos", "Tudo do plano mensal", "Economia de R$ 158,90 no ano", "Preço fixo por 12 meses", "Suporte VIP", "Sem reajustes durante o período", "Cancele quando quiser"] },
 ];
 
 export default function PlanosPage() {
@@ -43,21 +43,21 @@ export default function PlanosPage() {
           align-items: center;
           gap: 8px;
           margin-top: 24px;
-          padding: 14px 28px;
-          background: linear-gradient(90deg, #DC2626 0%, #7C3AED 100%);
+          padding: 12px 24px;
+          background: var(--vermelho);
           color: var(--branco);
           font-size: 14px;
-          font-weight: 700;
-          letter-spacing: 0.02em;
-          border-radius: 100px;
-          box-shadow: 0 10px 30px -10px rgba(220,38,38,0.5);
-          transition: all 0.2s;
+          font-weight: 600;
+          border-radius: 8px;
+          transition: all 0.15s;
           cursor: pointer;
         }
         .hero-cta:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 15px 40px -10px rgba(220,38,38,0.7);
+          background: #b91c1c;
         }
+        .hero-cta svg { transition: transform 0.2s; }
+        .hero-cta:hover svg { transform: translateY(2px); }
+        
         .hero-cta svg {
           transition: transform 0.2s;
         }
@@ -148,10 +148,7 @@ export default function PlanosPage() {
           transition: all 0.2s;
           cursor: pointer;
         }
-        .hero-cta:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 15px 40px -10px rgba(220,38,38,0.7);
-        }
+        
         .hero-cta svg {
           transition: transform 0.2s;
         }
@@ -178,8 +175,7 @@ export default function PlanosPage() {
         <div className="nav-links">
           <a href="/">Início</a>
           <a href="/#faq">FAQ</a>
-          <a href={linkWhats("mensal")} className="nav-cta" target="_blank" rel="noopener noreferrer">Testar grátis</a>
-        </div>
+          </div>
       </nav>
 
       <section className="hero">
